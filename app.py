@@ -8,8 +8,8 @@ def watt(Tensão, Corrente):
     Watt = V * A
     return Watt
 
-def ampere(Tensão, Potencia):
-    Ampere = Tensão / Potencia
+def ampere(Potencia, Tensão):
+    Ampere = Potencia / Tensão
     return Ampere
 
 def volt(Corrente, Ohm):
@@ -40,10 +40,12 @@ def main():
             Ohm = 0
 
         a = watt(Tensão, Corrente)
+
         try:
-            b = ampere(Tensão, Potencia)
+            b = float(ampere(Potencia, Tensão))
         except:
             b = 0
+
         c = volt(Corrente, Ohm)
         return render_template('main.html', a=a, b=b, c=c)
     else:
