@@ -1,13 +1,13 @@
 <h2>Calculadora de Watt/Corrente/Tensão</h2>
 <h3>Fórmulas:</h3>
-Watt = Tensão x Corrente<br>
-Corrente = Potência / Tensão<br>
-Tensão = Corrente x Resistência<br>
+Potência = Tensão x Corrente <br>
+Ampere = Potência / Tensão <br>
+Tensão = Corrente x Resistência <br>
 <form method="POST">
     <h1>Caso você não saiba algum dos valores, deixe a caixa de texto EM BRANCO!</h1>
     <input type="text" name="potencia" placeholder="Potência">
     <input type="text" name="tensao" placeholder="Tensão">
-    <input type="text" name="corrente" placeholder="Corrente">
+    <input type="text" name="corrente" placeholder="Ampere">
     <input type="text" name="Ohm" placeholder="Ohm/Resistência">
     <input type="submit" value="Calcular!">
 </form>
@@ -17,7 +17,7 @@ Tensão = Corrente x Resistência<br>
 {% endif %}
 
 {% if b %}
-    <div>Ampere: {{b}}.</div>
+    <div>Ampere: {{b}}</div>
 {% endif %}
 
 {% if c %}

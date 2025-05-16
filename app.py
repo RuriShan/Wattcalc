@@ -2,10 +2,7 @@ from flask import Flask, render_template, request, url_for, redirect
 app = Flask(__name__)
 
 def watt(Tensão, Corrente):
-    V = Tensão
-    A = Corrente
-
-    Watt = V * A
+    Watt = Tensão * Corrente
     return Watt
 
 def ampere(Potencia, Tensão):
